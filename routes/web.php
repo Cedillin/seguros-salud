@@ -15,8 +15,8 @@ Route::get('/', function () {
 
 // Breeze default routes
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    return redirect()->route('client.portal');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
