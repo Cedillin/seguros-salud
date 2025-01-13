@@ -13,11 +13,6 @@ Route::get('/', function () {
     return redirect()->route('client.portal');
 });
 
-// Breeze default routes
-Route::get('/dashboard', function () {
-    return redirect()->route('client.portal');
-});
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
