@@ -10,7 +10,7 @@ use App\Livewire\Insurance\SubscriptionMotor;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('client.portal');
 });
 
 // Breeze default routes
